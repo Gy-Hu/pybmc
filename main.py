@@ -4,11 +4,6 @@ Main function to run BMC
 import subprocess
 import argparse
 import os, os.path, shutil
-from datetime import datetime
-from datetime import timedelta
-from multiprocessing import Process
-from threading import Thread
-from time import sleep
 import sys
 from pathlib import Path
 import model
