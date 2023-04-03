@@ -54,5 +54,5 @@ if __name__ == '__main__':
         else:
             bmc.slv.pop()
     
-    
-    print("The result is unknown")
+    # reach here means UNSAT, k = args.k
+    print("The result is unknown after k {} bound".format(args.k))
