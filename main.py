@@ -24,8 +24,8 @@ def convert_aig_to_aag(file):
         
 
 if __name__ == '__main__':
-    help_info = "Usage: python main.py <file-name>.aag"
-    parser = argparse.ArgumentParser(description="Run tests examples on the PDR algorithm")
+    help_info = "Usage: python main.py <file-name>.aag (or <file-name>.aig) --k <unrolling steps>"
+    parser = argparse.ArgumentParser(description="Run tests examples on the BMC algorithm")
     parser.add_argument('--aag', type=str, help='The name of the test to run', default=None, nargs='?')
     parser.add_argument('--k', type=int, help='The number of unrolling steps', default=10, nargs='?')
     args = parser.parse_args()
