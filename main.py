@@ -31,11 +31,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
     m = model.Model()
     # SAT 1 - simple
-    #file = "/data/guangyuh/coding_env/pybmc/dataset/aig_benchmark/hwmcc07_tip_aag/texas.ifetch1^8.E.aag"
+    #file = "dataset/aig_benchmark/hwmcc07_tip_aag/texas.ifetch1^8.E.aag"
     # SAT 2 - toy
-    #file = "/data/guangyuh/coding_env/pybmc/dataset/aig_benchmark/hwmcc10-mod/shortp0.aag"
+    #file = "dataset/aig_benchmark/hwmcc10-mod/shortp0.aag"
     # UNSAT 1 - toy
-    # file = "/data/guangyuh/coding_env/pybmc/dataset/aig_benchmark/hwmcc07_tip/nusmv.syncarb5^2.B.aag"
+    # file = "dataset/aig_benchmark/hwmcc07_tip/nusmv.syncarb5^2.B.aag"
 
     file = args.aag
     if file.endswith(".aig"): 

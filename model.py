@@ -1,5 +1,5 @@
 '''
-The parser for PDR
+The parser for BMC
 '''
 import re
 from z3 import *
