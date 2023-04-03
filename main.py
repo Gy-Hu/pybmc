@@ -28,7 +28,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run tests examples on the PDR algorithm")
     parser.add_argument('--aag', type=str, help='The name of the test to run', default=None, nargs='?')
     parser.add_argument('--k', type=int, help='The number of unrolling steps', default=10, nargs='?')
-    args = parser.parse_args(['--aag', '/data/guangyuh/coding_env/pybmc/dataset/aig_benchmark/hwmcc10-mod/bob2.aig', '--k', '10'])
+    args = parser.parse_args()
     m = model.Model()
     # SAT 1 - simple
     #file = "/data/guangyuh/coding_env/pybmc/dataset/aig_benchmark/hwmcc07_tip_aag/texas.ifetch1^8.E.aag"
