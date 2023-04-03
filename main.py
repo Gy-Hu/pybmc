@@ -44,6 +44,14 @@ if __name__ == '__main__':
 
     bmc.setup()
     
-    for _ in range(1, args.k): bmc.unroll()
-    bmc.add(z3.Not(bmc.post.cube()))
+    for _ in range(1, args.k): 
+        bmc.unroll()
+        bmc.slv.push()
+        bmc.add(z3.Not(bmc.post.cube()))
+        if bmc.check() == z3.sat:
+            print(f"SAT, k = {_}")
+            break
+        else:
+            bmc.slv.pop()
+    #bmc.add(z3.Not(bmc.post.cube()))
     print(bmc.check())

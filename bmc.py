@@ -64,7 +64,8 @@ class BMC:
     def add(self, constraint):
         idx = self.cnt
         var_map = self.get_map(idx)
-        self.slv.add(substitute(constraint, var_map) )
+        self.slv.add(substitute(constraint, var_map))
+    
     
     def check(self):
         return self.slv.check()
