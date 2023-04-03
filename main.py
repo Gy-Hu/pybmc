@@ -6,6 +6,7 @@ Main function to run BMC
 
 
 
+
 import argparse
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
@@ -46,6 +47,7 @@ if __name__ == '__main__':
     bmc.setup()
 
     for _ in range(1, args.k): 
+        print(f"Unrolling k = {_}")
         bmc.unroll()
         bmc.slv.push()
         bmc.add(z3.Not(bmc.post.cube()))
