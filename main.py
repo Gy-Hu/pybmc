@@ -30,11 +30,11 @@ if __name__ == '__main__':
     parser.add_argument('--k', type=int, help='The number of unrolling steps', default=10, nargs='?')
     args = parser.parse_args()
     m = model.Model()
-    # SAT 1 - simple
+    # UNSAFE 1 - simple
     #file = "dataset/aig_benchmark/hwmcc07_tip_aag/texas.ifetch1^8.E.aag"
-    # SAT 2 - toy
+    # UNSAFE 2 - toy
     #file = "dataset/aig_benchmark/hwmcc10-mod/shortp0.aag"
-    # UNSAT 1 - toy
+    # SAFE 1 - toy
     # file = "dataset/aig_benchmark/hwmcc07_tip/nusmv.syncarb5^2.B.aag"
 
     file = args.aag
