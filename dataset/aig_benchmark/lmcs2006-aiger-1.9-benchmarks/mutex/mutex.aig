@@ -1,0 +1,48 @@
+aig 113 6 13 0 94 0 1 2
+80
+92
+112
+124
+130
+2
+4
+6
+8
+10
+12
+202
+1
+211
+2
+2
+218
+220
+224
+226
+! #'*%)&.+7)
+#+5NIM",S97-I<EC9U?)R[}ybp5Š7’~~vvˆˆ„¦’’ŒŒœ ¡>»¹«uDš¿µ¸?»¾i0 AIGER_NEXT_LTL_1_SPECF_1
+i1 AIGER_NEXT_LTL_1_SPECF_5
+i2 AIGER_NEXT_IGNORE_LTL_1
+i3 AIGER_NEXT_LTL_2_SPECF_2
+i4 AIGER_NEXT_LTL_2_SPECF_6
+i5 AIGER_NEXT_IGNORE_LTL_2
+l0 state1_a_1
+l1 AIGER_NOT_state1_a_0
+l2 state2_a_1
+l3 AIGER_NOT_state2_a_0
+l4 turn_a_0
+l5 LTL_1_SPECF_1
+l6 LTL_1_SPECF_5
+l7 IGNORE_LTL_1
+l8 LTL_2_SPECF_2
+l9 LTL_2_SPECF_6
+l10 IGNORE_LTL_2
+l11 AIGER_VALID
+l12 AIGER_INITIALIZED
+c0 AIGER_INVAR_0
+j0 AIGER_JUST_0
+j1 AIGER_JUST_1
+c
+smvtoaig
+1.9
+/tmp/tmp.JSeIn17960

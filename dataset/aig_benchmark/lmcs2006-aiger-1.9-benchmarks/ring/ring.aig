@@ -1,0 +1,60 @@
+aig 100 10 15 0 75 0 0 2 3
+2
+4
+60
+70
+80
+6
+8
+10
+12
+14
+16
+18
+20
+172
+1
+2
+3
+182
+184
+188
+192
+194
+196
+198
+200
+&$"/,*JEFB(8%2(/]FF>>>>V TI*L'ybbZZZZr $vwNããíÖà	éãîèíêàÄi0 AIGER_NEXT_running_a_1
+i1 AIGER_NEXT_running_a_0
+i2 AIGER_NEXT_LTL_1_SPECF_1
+i3 AIGER_NEXT_LTL_1_SPECF_5
+i4 AIGER_NEXT_LTL_1_SPECF_8
+i5 AIGER_NEXT_IGNORE_LTL_1
+i6 AIGER_NEXT_LTL_2_SPECF_2
+i7 AIGER_NEXT_LTL_2_SPECF_6
+i8 AIGER_NEXT_LTL_2_SPECF_9
+i9 AIGER_NEXT_IGNORE_LTL_2
+l0 running_a_1
+l1 running_a_0
+l2 gate1_o_output
+l3 gate2_o_output
+l4 gate3_o_output
+l5 LTL_1_SPECF_1
+l6 LTL_1_SPECF_5
+l7 LTL_1_SPECF_8
+l8 IGNORE_LTL_1
+l9 LTL_2_SPECF_2
+l10 LTL_2_SPECF_6
+l11 LTL_2_SPECF_9
+l12 IGNORE_LTL_2
+l13 AIGER_VALID
+l14 AIGER_INITIALIZED
+j0 AIGER_JUST_0
+j1 AIGER_JUST_1
+f0 AIGER_FAIR_0
+f1 AIGER_FAIR_1
+f2 AIGER_FAIR_2
+c
+smvtoaig
+1.9
+/tmp/tmp.SOQwK17907

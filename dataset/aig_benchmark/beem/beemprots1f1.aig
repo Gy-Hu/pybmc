@@ -1,0 +1,164 @@
+aig 479 13 74 1 392
+185
+191
+197
+203
+209
+215
+221
+227
+252
+264
+276
+288
+300
+312
+324
+332
+60
+62
+64
+66
+68
+70
+72
+74
+357
+367
+377
+387
+397
+407
+417
+423
+429
+435
+441
+447
+453
+459
+465
+471
+474
+478
+482
+486
+490
+494
+498
+503
+509
+515
+521
+527
+533
+539
+545
+551
+556
+562
+144
+564
+566
+150
+574
+578
+582
+589
+595
+598
+602
+609
+615
+618
+622
+959
+178
+HjšLlPn¢Tp¦Xrª!\t®#`v²%dx¶'ª®²¶º¾ÂÂîÌ%ö¾úÖ'‚º†à)-¶,’ê+š;²:ô-¦I®Hªş/²ÿV¶ˆ1¾‹53Æôøü€„ˆŒŒÖ–CˆàE„ê¦G'€&ô®I3ü2ş¶K?ø>ˆ¾M½J’ÆOÇSÊQ¬rÎQ°tÒS´vÖU¸xÚW¼zŞYÀ|â[Ä~æ]È€ê_ì]Ëî_ÏğaÓòc×ôeÛögßøiãúkèÜşwà‚yä†{èŠ}ì ğ"’ô$–ƒø&š…œ…¦¦ ‡¬¬¢‰¢‹Ÿˆ¥¬¯¥Š²§Š¸ª‰±À®‡³Æ±ŠÀ³ŠÂ¶£ÎÑº¥Ô×½¦Ş¿¨âÂù½ÁÅÉêõğ¹«¯³·òöˆú†·µµµµµµ‚
+¶Š“‘’¹•½Ÿ¹¥Á¦ÉÏÇÇÃÃËËááÙİáêÉÉÅ!Å#Í%Í'ã)ã+Û-ß/ã.”••“š››™¢££¡ª««©¯­¶¹º½L¾ÂãáÆ£ÊŸéçÈÉÇÅÈÈÅÃÇÅÇÊÆÌLi0 f08
+i1 f09
+i2 f00
+i3 f01
+i4 f12
+i5 f11
+i6 f10
+i7 f02
+i8 f03
+i9 f06
+i10 f07
+i11 f04
+i12 f05
+l0 v_v_channel_K[0]
+l1 v_v_channel_K[1]
+l2 v_v_channel_K[2]
+l3 v_v_channel_K[3]
+l4 v_v_channel_K[4]
+l5 v_v_channel_K[5]
+l6 v_v_channel_K[6]
+l7 v_v_channel_K[7]
+l8 v_lost_channel_K[0]
+l9 v_lost_channel_K[1]
+l10 v_lost_channel_K[2]
+l11 v_lost_channel_K[3]
+l12 v_lost_channel_K[4]
+l13 v_lost_channel_K[5]
+l14 v_lost_channel_K[6]
+l15 v_lost_channel_K[7]
+l16 v_v_channel_L[0]
+l17 v_v_channel_L[1]
+l18 v_v_channel_L[2]
+l19 v_v_channel_L[3]
+l20 v_v_channel_L[4]
+l21 v_v_channel_L[5]
+l22 v_v_channel_L[6]
+l23 v_v_channel_L[7]
+l24 v_lost_channel_L[0]
+l25 v_lost_channel_L[1]
+l26 v_lost_channel_L[2]
+l27 v_lost_channel_L[3]
+l28 v_lost_channel_L[4]
+l29 v_lost_channel_L[5]
+l30 v_lost_channel_L[6]
+l31 v_lost_channel_L[7]
+l32 v_value_Consumer[0]
+l33 v_value_Consumer[1]
+l34 v_value_Consumer[2]
+l35 v_value_Consumer[3]
+l36 v_value_Consumer[4]
+l37 v_value_Consumer[5]
+l38 v_value_Consumer[6]
+l39 v_value_Consumer[7]
+l40 v_value_Sender[0]
+l41 v_value_Sender[1]
+l42 v_value_Sender[2]
+l43 v_value_Sender[3]
+l44 v_value_Sender[4]
+l45 v_value_Sender[5]
+l46 v_value_Sender[6]
+l47 v_value_Sender[7]
+l48 v_value_Receiver[0]
+l49 v_value_Receiver[1]
+l50 v_value_Receiver[2]
+l51 v_value_Receiver[3]
+l52 v_value_Receiver[4]
+l53 v_value_Receiver[5]
+l54 v_value_Receiver[6]
+l55 v_value_Receiver[7]
+l56 a_ready_channel_K
+l57 a_tr_channel_K
+l58 a_data_lost
+l59 a_ready_channel_L
+l60 a_tr_channel_L
+l61 a_dataOK
+l62 a_ready_Producer
+l63 a_produce0
+l64 a_produce1
+l65 a_ready_Consumer
+l66 a_got_msg_Consumer
+l67 a_consume0
+l68 a_consume1
+l69 a_ready_Sender
+l70 a_sending
+l71 a_wait_msg
+l72 a_got_msg_Receiver
+l73 dve_invalid

@@ -1,0 +1,276 @@
+aig 896 86 75 1 735
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+46
+48
+50
+52
+54
+56
+58
+60
+62
+64
+66
+68
+70
+72
+74
+76
+78
+80
+82
+84
+86
+88
+90
+92
+94
+96
+98
+100
+102
+104
+106
+108
+110
+112
+114
+116
+118
+120
+122
+124
+126
+128
+130
+132
+134
+136
+138
+140
+142
+144
+146
+1
+1792
+468
+#!"!!"!!"!!!"!"!³±±±±±±³±±±±±±³±±±±±±³±±±±±±³±±±±±±³±±±±±±³±±±±±±¶º½ÁÅÉÍîÑ¨¬¯³·»¿úáäççÁ¿¿¿¿¿¿ŒùýÀ	‡„‹ˆ›"££!”«—	©ŸŸ	±	œ§	µ³³±ËÉÉÉÉÉÉÉÉÉÉÉˆ‰‰‡Ž–——•žŸŸ£¡ª­®±L™Œ‘”¤–ÝÛÅäÉåçå«šðåÈÇ«¢­¬îûç„Ü¶ëˆÖ£þ	ýßÛ®ˆâx R¡£šš¬P­¡¤¤ºN»Ÿ°°ÈLÉ¼¼ÖJ×›ÈÈäHå™ÔÔòFó—àà€D•ììnÞºšž¢¦ªª®±ƒ¢‹¦ÀÃ´›-¢,Ô×È¯­CžBèë}ÜÁ¿YšXüÿ{ðÓÑmÜŽ‘y‚ãá“Þ¢¥w–õó´sµu¦ƒ¤Œ«­«‘­–«—­œ«­¢«£­¨«©­®«¯­´«µ­>²¬àäèìðð’•eÐÐì¢¥cÞÞ)è(´·aîî=ä<ÆÉ_þþQàPØÛ]ŽŽc°èë[œœÍ	¦úýY¬¬Š	U‹	W¸¸”ç£‹	E‰	‹	kÌÌí¯	C›		iÜÜó½±	A¯	±	gîîùËÅ	?Ã	Å	e€	€	ÿÙÙ	=×	Ù	c’	’	…çí	;ë	í	a¤	¤	‹õ
+9ÿ	
+_¶	¶	‘ƒ•
+7“
+•
+]È	È	ž§
+W¥
+Õ	Ó	±
+U¯
+Ý	Û	
+½
+S»
+ç	å	
+É
+QÇ
+ñ	ï	
+Õ
+OÓ
+û	ù	
+á
+Mß
+…
+ƒ
+
+í
+Kë
+
+
+
+ù
+Iø
+˜
+˜
+
+^ü¦ý¦ð¶ñ¶äÈåÈØÚÙÚÌìÍìÀþÁþ´	µ	¨¢	©¢	> ²¡²«­®«Þ
+«ß
+­¨¼©¼³·¶µð
+«ñ
+­¬Ê­Ê¹Ã¼Á·ËºÉ±×´Õ²Ü³Ü»Ù¾×¹á¼ß³í¶ë²ô³ô¬€­€¹ù¼÷´¹ñ»i0 v_v_channel_K[0]
+i1 v_v_channel_K[1]
+i2 v_v_channel_K[2]
+i3 v_v_channel_K[3]
+i4 v_v_channel_K[4]
+i5 v_v_channel_K[5]
+i6 v_v_channel_K[6]
+i7 v_v_channel_K[7]
+i8 v_lost_channel_K[0]
+i9 v_lost_channel_K[1]
+i10 v_lost_channel_K[2]
+i11 v_lost_channel_K[3]
+i12 v_lost_channel_K[4]
+i13 v_lost_channel_K[5]
+i14 v_lost_channel_K[6]
+i15 v_lost_channel_K[7]
+i16 v_v_channel_L[0]
+i17 v_v_channel_L[1]
+i18 v_v_channel_L[2]
+i19 v_v_channel_L[3]
+i20 v_v_channel_L[4]
+i21 v_v_channel_L[5]
+i22 v_v_channel_L[6]
+i23 v_v_channel_L[7]
+i24 v_lost_channel_L[0]
+i25 v_lost_channel_L[1]
+i26 v_lost_channel_L[2]
+i27 v_lost_channel_L[3]
+i28 v_lost_channel_L[4]
+i29 v_lost_channel_L[5]
+i30 v_lost_channel_L[6]
+i31 v_lost_channel_L[7]
+i32 v_value_Consumer[0]
+i33 v_value_Consumer[1]
+i34 v_value_Consumer[2]
+i35 v_value_Consumer[3]
+i36 v_value_Consumer[4]
+i37 v_value_Consumer[5]
+i38 v_value_Consumer[6]
+i39 v_value_Consumer[7]
+i40 v_value_Sender[0]
+i41 v_value_Sender[1]
+i42 v_value_Sender[2]
+i43 v_value_Sender[3]
+i44 v_value_Sender[4]
+i45 v_value_Sender[5]
+i46 v_value_Sender[6]
+i47 v_value_Sender[7]
+i48 v_value_Receiver[0]
+i49 v_value_Receiver[1]
+i50 v_value_Receiver[2]
+i51 v_value_Receiver[3]
+i52 v_value_Receiver[4]
+i53 v_value_Receiver[5]
+i54 v_value_Receiver[6]
+i55 v_value_Receiver[7]
+i56 a_ready_channel_K
+i57 a_tr_channel_K
+i58 a_data_lost
+i59 a_ready_channel_L
+i60 a_tr_channel_L
+i61 a_dataOK
+i62 a_ready_Producer
+i63 a_produce0
+i64 a_produce1
+i65 a_ready_Consumer
+i66 a_got_msg_Consumer
+i67 a_consume0
+i68 a_consume1
+i69 a_ready_Sender
+i70 a_sending
+i71 a_wait_msg
+i72 a_got_msg_Receiver
+i73 f00
+i74 f01
+i75 f02
+i76 f03
+i77 f04
+i78 f05
+i79 f06
+i80 f07
+i81 f08
+i82 f09
+i83 f10
+i84 f11
+i85 f12
+l0 nextv_v_channel_K[0]
+l1 nextv_v_channel_K[1]
+l2 nextv_v_channel_K[2]
+l3 nextv_v_channel_K[3]
+l4 nextv_v_channel_K[4]
+l5 nextv_v_channel_K[5]
+l6 nextv_v_channel_K[6]
+l7 nextv_v_channel_K[7]
+l8 nextv_lost_channel_K[0]
+l9 nextv_lost_channel_K[1]
+l10 nextv_lost_channel_K[2]
+l11 nextv_lost_channel_K[3]
+l12 nextv_lost_channel_K[4]
+l13 nextv_lost_channel_K[5]
+l14 nextv_lost_channel_K[6]
+l15 nextv_lost_channel_K[7]
+l16 nextv_v_channel_L[0]
+l17 nextv_v_channel_L[1]
+l18 nextv_v_channel_L[2]
+l19 nextv_v_channel_L[3]
+l20 nextv_v_channel_L[4]
+l21 nextv_v_channel_L[5]
+l22 nextv_v_channel_L[6]
+l23 nextv_v_channel_L[7]
+l24 nextv_lost_channel_L[0]
+l25 nextv_lost_channel_L[1]
+l26 nextv_lost_channel_L[2]
+l27 nextv_lost_channel_L[3]
+l28 nextv_lost_channel_L[4]
+l29 nextv_lost_channel_L[5]
+l30 nextv_lost_channel_L[6]
+l31 nextv_lost_channel_L[7]
+l32 nextv_value_Consumer[0]
+l33 nextv_value_Consumer[1]
+l34 nextv_value_Consumer[2]
+l35 nextv_value_Consumer[3]
+l36 nextv_value_Consumer[4]
+l37 nextv_value_Consumer[5]
+l38 nextv_value_Consumer[6]
+l39 nextv_value_Consumer[7]
+l40 nextv_value_Sender[0]
+l41 nextv_value_Sender[1]
+l42 nextv_value_Sender[2]
+l43 nextv_value_Sender[3]
+l44 nextv_value_Sender[4]
+l45 nextv_value_Sender[5]
+l46 nextv_value_Sender[6]
+l47 nextv_value_Sender[7]
+l48 nextv_value_Receiver[0]
+l49 nextv_value_Receiver[1]
+l50 nextv_value_Receiver[2]
+l51 nextv_value_Receiver[3]
+l52 nextv_value_Receiver[4]
+l53 nextv_value_Receiver[5]
+l54 nextv_value_Receiver[6]
+l55 nextv_value_Receiver[7]
+l56 nexta_ready_channel_K
+l57 nexta_tr_channel_K
+l58 nexta_data_lost
+l59 nexta_ready_channel_L
+l60 nexta_tr_channel_L
+l61 nexta_dataOK
+l62 nexta_ready_Producer
+l63 nexta_produce0
+l64 nexta_produce1
+l65 nexta_ready_Consumer
+l66 nexta_got_msg_Consumer
+l67 nexta_consume0
+l68 nexta_consume1
+l69 nexta_ready_Sender
+l70 nexta_sending
+l71 nexta_wait_msg
+l72 nexta_got_msg_Receiver
+l73 dve_initialized
+l74 dve_valid

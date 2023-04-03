@@ -1,0 +1,194 @@
+aig 708 39 54 0 615 0 1 5 6
+2
+4
+6
+252
+272
+286
+8
+10
+12
+14
+320
+340
+16
+18
+20
+22
+368
+392
+24
+26
+28
+30
+448
+482
+500
+32
+34
+36
+38
+538
+560
+590
+616
+40
+44
+46
+48
+50
+52
+54
+56
+58
+60
+62
+64
+66
+68
+70
+72
+74
+76
+78
+1
+1352
+1365
+2
+2
+2
+2
+1
+1372
+1374
+1382
+1384
+1390
+1392
+1400
+1402
+1404
+1406
+1408
+1410
+1412
+1414
+1416
+glhi]lor>6?6D{€I7L5PRŒW”#*298B?f;m©>FLVSd<}=ZdÌ¯]Á×ÏØÛàkdnÔ‡¿"ó€mâÒ	›2À¬è/0Üãô–ù·‹=Q¯„Y©ñ÷Ïµ¹’¤—››ž°²¨«Š£¯£²¶/.†Ä³ÈÈ"°'9‚†‰Q©WŒ#Â&Â–šºE çï¦©­®±°´·WªxÀ‰á#íÈËÏp´˜‡	÷É¨¢¨5ã8³î´AÆ¸•¾ êÄƒ…‰!­¶¯¼¹ºµ³±¯°¯­®ÎËb³}Ï‡‰Ù\ÁwÝ‘ç^ÏyëŸ¡ÛàãèÜ²² ‰`ñ{ÃÅÚÊÊ8%ØÒÒB7
+$BT;oMÞ€€:^n(dD2xJ6NLt„@z
+JŒJ#+;®g¹àÍž¸¸îÊïÊŒËâÑ³ÎÎÔ(ÒgåÚùÄÞÞ ©Í$èèââô$ôg;¤âüü
+øø†„g÷ððó
+ñ³ÌÈ„žž¢  g›ˆŒŒ
+×Äì ºº¾ $JdŽ»ØÃÎÏÀkÁ`ÛƒáòÁèÍÚiÛ^õ™›ûŒ¿‚Ëôgõ\±³•¦½œÉŽeZ©ÉË¯Œë…ôÎ»Ï°×§ãåË¨é¡òê¹ë®óÃýÿçÄç½ð†·‡¬ß—	™	ƒàåÙî¢µ£ª«û±	³	ŸÏŠÄ¥Å˜Ž	’	•	É	Ë	¹éˆÞ£ß–¨	¬	¯	á	ã	Óƒ†ø¡ù”Â	Æ	É	ù	û	í„’Ÿ“’Ü	à	ã	‘
+“
+‡	ˆ		¾	mô	Ï	›	¿	>ÿ	Å	¡	¤	!Ã	D‰
+É	«	®	§	É	³	¶	Ç	Rœ
+Í	½	À	Â	À	ôÒþÊÊ	,ÚrÎ	Ji0 AIGER_NEXT_running_a_2
+i1 AIGER_NEXT_running_a_1
+i2 AIGER_NEXT_running_a_0
+i3 AIGER_NEXT_sender_o_data_a_3
+i4 AIGER_NEXT_sender_o_data_a_2
+i5 AIGER_NEXT_sender_o_data_a_1
+i6 AIGER_NEXT_sender_o_data_a_0
+i7 AIGER_NEXT_s2r___in_o_data_a_3
+i8 AIGER_NEXT_s2r___in_o_data_a_2
+i9 AIGER_NEXT_s2r___in_o_data_a_1
+i10 AIGER_NEXT_s2r___in_o_data_a_0
+i11 AIGER_NEXT_s2r___out_o_data_a_3
+i12 AIGER_NEXT_s2r___out_o_data_a_2
+i13 AIGER_NEXT_s2r___out_o_data_a_1
+i14 AIGER_NEXT_s2r___out_o_data_a_0
+i15 AIGER_NEXT_receiver_o_data_a_3
+i16 AIGER_NEXT_receiver_o_data_a_2
+i17 AIGER_NEXT_receiver_o_data_a_1
+i18 AIGER_NEXT_receiver_o_data_a_0
+i19 AIGER_NEXT__o_ORACLE0
+i20 _o_ORACLE1
+i21 AIGER_NEXT_LTL_1_SPECF_1
+i22 AIGER_NEXT_LTL_1_SPECF_5
+i23 AIGER_NEXT_IGNORE_LTL_1
+i24 AIGER_NEXT_LTL_2_SPECF_1
+i25 AIGER_NEXT_LTL_2_SPECF_5
+i26 AIGER_NEXT_LTL_2_SPECF_8
+i27 AIGER_NEXT_IGNORE_LTL_2
+i28 AIGER_NEXT_LTL_3_SPECF_1
+i29 AIGER_NEXT_LTL_3_SPECF_4
+i30 AIGER_NEXT_IGNORE_LTL_3
+i31 AIGER_NEXT_LTL_4_SPECF_1
+i32 AIGER_NEXT_LTL_4_SPECF_6
+i33 AIGER_NEXT_LTL_4_SPECF_9
+i34 AIGER_NEXT_IGNORE_LTL_4
+i35 AIGER_NEXT_LTL_5_SPECF_2
+i36 AIGER_NEXT_LTL_5_SPECF_7
+i37 AIGER_NEXT_LTL_5_SPECF_10
+i38 AIGER_NEXT_IGNORE_LTL_5
+l0 running_a_2
+l1 running_a_1
+l2 running_a_0
+l3 sender_o_state_a_1
+l4 sender_o_state_a_0
+l5 sender_o_abp
+l6 sender_o_data_a_3
+l7 sender_o_data_a_2
+l8 sender_o_data_a_1
+l9 sender_o_data_a_0
+l10 AIGER_NOT_s2r___in_o_tag_a_1
+l11 AIGER_NOT_s2r___in_o_tag_a_0
+l12 s2r___in_o_data_a_3
+l13 s2r___in_o_data_a_2
+l14 s2r___in_o_data_a_1
+l15 s2r___in_o_data_a_0
+l16 AIGER_NOT_s2r___out_o_tag_a_1
+l17 AIGER_NOT_s2r___out_o_tag_a_0
+l18 s2r___out_o_data_a_3
+l19 s2r___out_o_data_a_2
+l20 s2r___out_o_data_a_1
+l21 s2r___out_o_data_a_0
+l22 receiver_o_state_a_1
+l23 AIGER_NOT_receiver_o_state_a_0
+l24 receiver_o_abp
+l25 receiver_o_data_a_3
+l26 receiver_o_data_a_2
+l27 receiver_o_data_a_1
+l28 receiver_o_data_a_0
+l29 AIGER_NOT_r2s___in_o_tag_a_1
+l30 AIGER_NOT_r2s___in_o_tag_a_0
+l31 AIGER_NOT_r2s___out_o_tag_a_1
+l32 AIGER_NOT_r2s___out_o_tag_a_0
+l33 _o_ORACLE0
+l34 LTL_1_SPECF_1
+l35 LTL_1_SPECF_5
+l36 IGNORE_LTL_1
+l37 LTL_2_SPECF_1
+l38 LTL_2_SPECF_5
+l39 LTL_2_SPECF_8
+l40 IGNORE_LTL_2
+l41 LTL_3_SPECF_1
+l42 LTL_3_SPECF_4
+l43 IGNORE_LTL_3
+l44 LTL_4_SPECF_1
+l45 LTL_4_SPECF_6
+l46 LTL_4_SPECF_9
+l47 IGNORE_LTL_4
+l48 LTL_5_SPECF_2
+l49 LTL_5_SPECF_7
+l50 LTL_5_SPECF_10
+l51 IGNORE_LTL_5
+l52 AIGER_INITIALIZED
+l53 AIGER_VALID
+c0 AIGER_INVAR_0
+j0 AIGER_JUST_0
+j1 AIGER_JUST_1
+j2 AIGER_JUST_2
+j3 AIGER_JUST_3
+j4 AIGER_JUST_4
+f0 AIGER_FAIR_0
+f1 AIGER_FAIR_1
+f2 AIGER_FAIR_2
+f3 AIGER_FAIR_3
+f4 AIGER_FAIR_4
+f5 AIGER_FAIR_5
+c
+smvtoaig
+1.9
+/tmp/tmp.TICJU17873

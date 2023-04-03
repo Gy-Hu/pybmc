@@ -1,0 +1,19 @@
+MODULE inverter(input)
+VAR
+  output : boolean;
+ASSIGN
+  init(output) := 0;
+  next(output) := !input;
+FAIRNESS
+  running
+
+MODULE main
+VAR
+  gate1 : process inverter(gate3.output);
+  gate2 : process inverter(gate1.output);
+  gate3 : process inverter(gate2.output);
+
+-- p0.ltl
+LTLSPEC (G(F(gate1.output)))&(G(F(!(gate1.output))))
+-- p0neg.ltl
+LTLSPEC !((G(F(gate1.output)))&(G(F(!(gate1.output)))))

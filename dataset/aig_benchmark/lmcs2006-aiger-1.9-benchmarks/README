@@ -1,0 +1,86 @@
+This set contains SMV and AIGER representations of a selection of the
+benchmarks from the paper "Linear Encodings of Bounded LTL Model Checking"
+by Biere, Heljanko, Junttila, Latvala, and Schuppan. The original benchmark
+set is available from: http://www.tcs.hut.fi/Software/benchmarks/LMCS-2006/
+
+The list below states for each model / property combination in this set 
+whether the property holds or not in the "result" column. This result has been
+obtained using the BDD based model checker in NuSMV 2.4.3 on the included SMV
+models.
+
+The values in the "shortest cex." column correspond to the length of the
+shortest counterexample, i.e. the shortest stimulus for the AIGER file included
+in this set that is a witness for justice j'property id'. The shortest counter-
+examples that can be found for the corresponding SMV models included in this 
+set (for example using NuSMV's implementation of SBMC) are often shorter. 
+This is because for the conversion from SMV to AIGER the 'ltl2smv' tool was 
+used (included in NuSMV 2.4.3) to expand LTL properties into SMV, and this 
+does not preserve minimal length counterexamples.
+
+I have put significant effort into ensuring the data listed below is correct.
+If you nevertheless think there is an error please send an e-mail to
+siert.wieringa@aalto.fi
+
+Model name      , property id , property name   , result   , shortest cex.
+
+abp4            , 0           , p2false         , FALSE    , 18
+abp4            , 1           , p2true          , TRUE     ,
+abp4            , 2           , pold            , TRUE     , 
+abp4            , 3           , ptimo           , FALSE    , 20
+abp4            , 4           , ptimoneg        , TRUE     , 
+bc57-sensors    , 0           , p1neg           , FALSE    , 104
+bc57-sensors    , 1           , p0              , TRUE     , 
+bc57-sensors    , 2           , p1              , TRUE     , 
+bc57-sensors    , 3           , p2              , TRUE     , 
+bc57-sensors    , 4           , p3              , FALSE    , 104
+bc57-sensors    , 5           , p0neg           , FALSE    , 104
+bc57-sensors    , 6           , p2neg           , FALSE    , 104
+brp             , 0           , ptimo           , TRUE     , 
+brp             , 1           , p1neg           , FALSE    , 2
+brp             , 2           , p1              , TRUE     , 
+brp             , 3           , ptimonegnv      , FALSE    , 25
+brp             , 4           , ptimoneg        , FALSE    , 2
+counter         , 0           , p0              , TRUE     , 
+counter         , 1           , p0neg           , FALSE    , 9
+dme2            , 0           , ptimo           , FALSE    , 44
+dme2            , 1           , ptimonegnv      , FALSE    , 40
+dme2            , 2           , ptimoneg        , FALSE    , 2
+dme3            , 0           , ptimo           , FALSE    , 64
+dme3            , 1           , p1neg           , FALSE    , 2
+dme3            , 2           , p1              , TRUE     , 
+dme3            , 3           , ptimonegnv      , FALSE    , 61
+dme3            , 4           , ptimoneg        , FALSE    , 2
+dme4            , 0           , ptimo           , FALSE    , 84
+dme4            , 1           , p1neg           , FALSE    , 2
+dme4            , 2           , p1              , TRUE     , 
+dme4            , 3           , ptimonegnv      , FALSE    , 81
+dme4            , 4           , ptimoneg        , FALSE    , 2
+dme5            , 0           , ptimo           , FALSE    , 103
+dme5            , 1           , p1neg           , FALSE    , 2
+dme5            , 2           , p1              , TRUE     , 
+dme5            , 3           , ptimonegnv      , FALSE    , 100
+dme5            , 4           , ptimoneg        , FALSE    , 2
+dme6            , 0           , ptimo           , FALSE    , 123
+dme6            , 1           , p1neg           , FALSE    , 2
+dme6            , 2           , p1              , TRUE     , 
+dme6            , 3           , ptimonegnv      , FALSE    , 120
+dme6            , 4           , ptimoneg        , FALSE    , 2
+mutex           , 0           , p0              , TRUE     , 
+mutex           , 1           , p0neg           , FALSE    , 7
+production-cell , 0           , p4neg           , FALSE    , 82
+production-cell , 1           , p1neg           , FALSE    , 127
+production-cell , 2           , p0              , TRUE     , 
+production-cell , 3           , p1              , TRUE     , 
+production-cell , 4           , p2              , TRUE     , 
+production-cell , 5           , p3              , TRUE     , 
+production-cell , 6           , p4              , UNKNOWN  , (probably TRUE)
+production-cell , 7           , p3neg           , FALSE    , 82
+production-cell , 8           , p0neg           , FALSE    , 85
+production-cell , 9           , p2neg           , FALSE    , 127
+ring            , 0           , p0              , TRUE     , 
+ring            , 1           , p0neg           , FALSE    , 8
+short           , 0           , p0              , TRUE     , 
+short           , 1           , p0neg           , FALSE    , 2
+srg5            , 0           , ptimo           , TRUE     , 
+srg5            , 1           , ptimonegnv      , FALSE    , 8
+srg5            , 2           , ptimoneg        , FALSE    , 2

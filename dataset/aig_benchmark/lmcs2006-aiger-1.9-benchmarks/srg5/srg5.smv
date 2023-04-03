@@ -1,0 +1,30 @@
+MODULE main
+VAR -- primary inputs
+  inp : boolean; -- input
+  ena : boolean; -- enable
+  res : boolean; -- reset
+VAR -- state bits
+  x0 : boolean;
+  x1 : boolean;
+  x2 : boolean;
+  x3 : boolean;
+  x4 : boolean;
+ASSIGN
+  init(x0) := 0;
+  init(x1) := 0;
+  init(x2) := 0;
+  init(x3) := 0;
+  init(x4) := 0;
+ASSIGN
+  next(x0) := (inp & ena | x0 & !ena) & !res;
+  next(x1) := (x0 & ena | x1 & !ena) & !res;
+  next(x2) := (x1 & ena | x2 & !ena) & !res;
+  next(x3) := (x2 & ena | x3 & !ena) & !res;
+  next(x4) := (x3 & ena | x4 & !ena) & !res;
+
+-- ptimo.ltl
+LTLSPEC (((F(G(!(res))))&(G(F(ena))))&(G(F(x0))))->(F((x0)S((x1)S((x2)S((x3)S(x4))))))
+-- ptimonegnv.ltl
+LTLSPEC !(((((F(G(!(res))))&(G(F(ena))))&(G(F(x0))))->(F((x0)S((x1)S((x2)S((x3)S(x4)))))))&(((F(G(!(res))))&(G(F(ena))))&(G(F(x0)))))
+-- ptimoneg.ltl
+LTLSPEC !((((F(G(!(res))))&(G(F(ena))))&(G(F(x0))))->(F((x0)S((x1)S((x2)S((x3)S(x4)))))))

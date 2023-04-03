@@ -1,0 +1,91 @@
+MODULE and-gate(in1,in2)
+VAR
+  out : boolean;
+ASSIGN
+  init(out) := 0;
+  next(out) := (in1 & in2) union out;
+
+MODULE and-gate-init(in1,in2,init-out)
+VAR
+  out : boolean;
+ASSIGN
+  init(out) := init-out;
+  next(out) := (in1 & in2) union out;
+
+MODULE or-gate(in1,in2)
+VAR
+  out : boolean;
+ASSIGN
+  init(out) := 0;
+  next(out) := (in1 | in2) union out;
+
+MODULE c-element(in1,in2)
+VAR
+  out : boolean;
+ASSIGN
+  init(out) := 0;
+  next(out) := 
+    case
+      in1 = in2 : in1 union out;
+      1 : out;
+    esac;
+
+MODULE mutex-half(inp,other-out)
+VAR
+  out : boolean;
+ASSIGN
+  init(out) := 0;
+  next(out) := inp union out;
+TRANS
+  !(next(out) & next(other-out))
+
+MODULE user
+VAR
+  req : boolean;
+ASSIGN
+  init(req) := 0;
+  next(req) := (!ack) union req;
+
+MODULE cell(left,right,token)
+VAR
+  u : user;
+  a : mutex-half(u.req,b.out);
+  b : mutex-half(left.req,a.out);
+  c : and-gate(a.out,!left.ack);
+  d : and-gate(b.out,!u.ack);
+  g : or-gate(c.out,d.out);
+  e : c-element(c.out,i.out);
+  f : c-element(d.out,i.out);
+  h : c-element(g.out,j.out);
+  k : and-gate(g.out,!h.out);
+  i : and-gate(h.out,!j.out);
+  l : and-gate(k.out,m.out);
+  j : or-gate(l.out,ack);
+  p : and-gate(k.out,n.out);
+  n : and-gate-init(!e.out,!m.out,!token);
+  m : and-gate-init(!f.out,!n.out,token);
+  r : and-gate(e.out,m.out);
+  q : and-gate(f.out,n.out);
+DEFINE
+  req := p.out;
+  left.ack := q.out;
+  u.ack := r.out;
+
+MODULE main
+VAR
+  e-5 : process cell(e-1,e-4,0);
+  e-4 : process cell(e-5,e-3,0);
+  e-3 : process cell(e-4,e-2,1);
+  e-2 : process cell(e-3,e-1,0);
+  e-1 : process cell(e-2,e-5,0);
+
+-- ptimo.ltl
+LTLSPEC G((e-2.u.ack)->((e-2.u.ack)T((!(e-2.u.ack))T(!(e-1.req)))))
+-- p1neg.ltl
+LTLSPEC !(G(((e-3.ack)&(X(!(e-3.ack))))->(X((G(!(e-3.ack)))|(((!(e-3.ack))U(e-2.ack))U(e-1.ack))))))
+-- p1.ltl
+LTLSPEC G(((e-3.ack)&(X(!(e-3.ack))))->(X((G(!(e-3.ack)))|(((!(e-3.ack))U(e-2.ack))U(e-1.ack)))))
+-- ptimonegnv.ltl
+LTLSPEC !((G((e-2.u.ack)->((e-2.u.ack)T((!(e-2.u.ack))T(!(e-1.req))))))&(G(F(e-2.u.ack))))
+-- ptimoneg.ltl
+LTLSPEC !(G((e-2.u.ack)->((e-2.u.ack)T((!(e-2.u.ack))T(!(e-1.req))))))

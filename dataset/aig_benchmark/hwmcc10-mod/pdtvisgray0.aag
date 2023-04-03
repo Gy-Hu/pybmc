@@ -1,0 +1,38 @@
+aag 21 5 5 1 11
+2
+4
+6
+8
+10
+12 2
+14 12
+16 33
+18 42
+20 20
+40
+22 14 13
+24 15 12
+26 25 23
+28 26 16
+30 27 17
+32 31 29
+34 33 13
+36 32 12
+38 37 35
+40 39 18
+42 17 15
+i0 pi0
+i1 pi1
+i2 pi2
+i3 pi3
+i4 pi4
+l0 lo0
+l1 lo1
+l2 lo2
+l3 lo3
+l4 lo4
+o0 po0
+c
+hwmcc10/pdtvisgray0
+This file was written by ABC on Tue Apr 19 07:37:23 2022
+For information about AIGER format, refer to http://fmv.jku.at/aiger

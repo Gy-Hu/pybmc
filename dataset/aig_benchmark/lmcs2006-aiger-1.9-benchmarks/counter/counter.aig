@@ -1,0 +1,43 @@
+aig 69 6 11 0 52 0 0 2
+36
+44
+52
+2
+4
+6
+8
+10
+12
+124
+1
+2
+2
+130
+132
+136
+138
+	2/0.*BF66
+22@@<XHH
+DDRVW:OkadWgji0 AIGER_NEXT_LTL_1_SPECF_1
+i1 AIGER_NEXT_LTL_1_SPECF_4
+i2 AIGER_NEXT_IGNORE_LTL_1
+i3 AIGER_NEXT_LTL_2_SPECF_2
+i4 AIGER_NEXT_LTL_2_SPECF_5
+i5 AIGER_NEXT_IGNORE_LTL_2
+l0 bit0_o_value
+l1 bit1_o_value
+l2 bit2_o_value
+l3 LTL_1_SPECF_1
+l4 LTL_1_SPECF_4
+l5 IGNORE_LTL_1
+l6 LTL_2_SPECF_2
+l7 LTL_2_SPECF_5
+l8 IGNORE_LTL_2
+l9 AIGER_VALID
+l10 AIGER_INITIALIZED
+j0 AIGER_JUST_0
+j1 AIGER_JUST_1
+c
+smvtoaig
+1.9
+/tmp/tmp.iMcip17929

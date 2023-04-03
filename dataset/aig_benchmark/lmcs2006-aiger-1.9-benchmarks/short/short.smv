@@ -1,0 +1,15 @@
+MODULE main
+VAR
+  request : boolean;
+  state : {ready,busy};
+ASSIGN
+  init(state) := ready;
+  next(state) := case
+                   state = ready & request : busy;
+                   1 : {ready,busy};
+                 esac;
+
+-- p0.ltl
+LTLSPEC G((request)->(F(state=busy)))
+-- p0neg.ltl
+LTLSPEC !(G((request)->(F(state=busy))))

@@ -1,0 +1,161 @@
+aig 394 39 46 0 309 0 0 3
+2
+4
+6
+180
+190
+200
+210
+220
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+32
+34
+36
+38
+40
+42
+44
+46
+48
+50
+52
+54
+56
+58
+60
+62
+64
+66
+68
+70
+72
+74
+76
+78
+716
+1
+4
+7
+5
+720
+724
+730
+732
+736
+746
+750
+754
+758
+764
+766
+770
+776
+782
+786
+788
+ZX\``fhhppp	z&x
+x„0ÓÖÓ
+Ó×ÕÕÕÕÕÖÕØÕ ØÖÓÕ	×	ÝÝÝÝÞÝ4àÝ:àÞÛ	àßßßà=ŠÄW\|]|`€a€d|e|Úî´´æ	ÀÀò	ÌÌþ	ØØ¤¶š²®À¦Îžïšš$0<á¢²‰´´¬¬^fnºx¦WÀ~Á~Ä‚Å‚È~É~Ì‚Í‚Â0ðœœÎ0	¨¨Ú0	´´æ0	ÀÀ¦œœ´”ÂŒÐ„×‚‚$0<ãŠœí˜˜ð¦¦––hpx€®ŠœW¬†­†°Š±Š´†µ†¸Š¹Š¸Hþ’’ÄH	žžÐH	ªªÜH	¶¶´„ªÂ|ÐtÞlÍøø$0<ñpäŽŽ
+ŠŠ\dlt˜~‚’žŸ”æ§ì«ó÷±´3ðê·å*ã*äÁô#Åð)Éø)Íÿ$ƒÓÖ„àÙéDíßóD÷åþ=éìi0 AIGER_NEXT_inp
+i1 AIGER_NEXT_ena
+i2 AIGER_NEXT_res
+i3 AIGER_NEXT_LTL_1_SPECF_5
+i4 AIGER_NEXT_LTL_1_SPECF_8
+i5 AIGER_NEXT_LTL_1_SPECF_10
+i6 AIGER_NEXT_LTL_1_SPECF_14
+i7 AIGER_NEXT_LTL_1_SPECF_17
+i8 AIGER_NEXT_LTL_1_SPECF_19
+i9 AIGER_NEXT_LTL_1_SPECF_21
+i10 AIGER_NEXT_LTL_1_SPECF_23
+i11 AIGER_NEXT_LTL_1_SPECF_25
+i12 AIGER_NEXT_LTL_1_SPECF_27
+i13 AIGER_NEXT_IGNORE_LTL_1
+i14 AIGER_NEXT_LTL_2_SPECF_4
+i15 AIGER_NEXT_LTL_2_SPECF_7
+i16 AIGER_NEXT_LTL_2_SPECF_10
+i17 AIGER_NEXT_LTL_2_SPECF_13
+i18 AIGER_NEXT_LTL_2_SPECF_16
+i19 AIGER_NEXT_LTL_2_SPECF_19
+i20 AIGER_NEXT_LTL_2_SPECF_24
+i21 AIGER_NEXT_LTL_2_SPECF_27
+i22 AIGER_NEXT_LTL_2_SPECF_29
+i23 AIGER_NEXT_LTL_2_SPECF_31
+i24 AIGER_NEXT_LTL_2_SPECF_33
+i25 AIGER_NEXT_LTL_2_SPECF_35
+i26 AIGER_NEXT_IGNORE_LTL_2
+i27 AIGER_NEXT_LTL_3_SPECF_3
+i28 AIGER_NEXT_LTL_3_SPECF_6
+i29 AIGER_NEXT_LTL_3_SPECF_9
+i30 AIGER_NEXT_LTL_3_SPECF_12
+i31 AIGER_NEXT_LTL_3_SPECF_15
+i32 AIGER_NEXT_LTL_3_SPECF_18
+i33 AIGER_NEXT_LTL_3_SPECF_20
+i34 AIGER_NEXT_LTL_3_SPECF_22
+i35 AIGER_NEXT_LTL_3_SPECF_24
+i36 AIGER_NEXT_LTL_3_SPECF_26
+i37 AIGER_NEXT_LTL_3_SPECF_28
+i38 AIGER_NEXT_IGNORE_LTL_3
+l0 inp
+l1 ena
+l2 res
+l3 x0
+l4 x1
+l5 x2
+l6 x3
+l7 x4
+l8 LTL_1_SPECF_5
+l9 LTL_1_SPECF_8
+l10 LTL_1_SPECF_10
+l11 LTL_1_SPECF_14
+l12 LTL_1_SPECF_17
+l13 LTL_1_SPECF_19
+l14 LTL_1_SPECF_21
+l15 LTL_1_SPECF_23
+l16 LTL_1_SPECF_25
+l17 LTL_1_SPECF_27
+l18 IGNORE_LTL_1
+l19 LTL_2_SPECF_4
+l20 LTL_2_SPECF_7
+l21 LTL_2_SPECF_10
+l22 LTL_2_SPECF_13
+l23 LTL_2_SPECF_16
+l24 LTL_2_SPECF_19
+l25 LTL_2_SPECF_24
+l26 LTL_2_SPECF_27
+l27 LTL_2_SPECF_29
+l28 LTL_2_SPECF_31
+l29 LTL_2_SPECF_33
+l30 LTL_2_SPECF_35
+l31 IGNORE_LTL_2
+l32 LTL_3_SPECF_3
+l33 LTL_3_SPECF_6
+l34 LTL_3_SPECF_9
+l35 LTL_3_SPECF_12
+l36 LTL_3_SPECF_15
+l37 LTL_3_SPECF_18
+l38 LTL_3_SPECF_20
+l39 LTL_3_SPECF_22
+l40 LTL_3_SPECF_24
+l41 LTL_3_SPECF_26
+l42 LTL_3_SPECF_28
+l43 IGNORE_LTL_3
+l44 AIGER_VALID
+l45 AIGER_INITIALIZED
+j0 AIGER_JUST_0
+j1 AIGER_JUST_1
+j2 AIGER_JUST_2
+c
+smvtoaig
+1.9
+/tmp/tmp.eiVnA17902
