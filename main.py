@@ -53,5 +53,5 @@ if __name__ == '__main__':
             break
         else:
             bmc.slv.pop()
-    #bmc.add(z3.Not(bmc.post.cube()))
-    print(bmc.check())
+            
+    print("The result is unknown")
