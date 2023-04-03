@@ -32,11 +32,7 @@ class tCube:
     
     def __eq__(self, other) : 
         return collections.Counter(self.cubeLiterals) == collections.Counter(other.cubeLiterals)
-        #return self.cubeLiterals == other.cubeLiterals
-        # self.t == other.t
 
-#TODO: Using multiple timer to caculate which part of the code has the most time consumption
-    # 解析 sat 求解出的 model, 并将其加入到当前 tCube 中 #TODO: lMap should incudes the v prime and i prime
     def addModel(self, lMap, model, remove_input): # not remove input' when add model
         no_var_primes = [l for l in model if str(l)[0] == 'i' or not str(l).endswith('_prime')]# no_var_prime -> i2, i4, i6, i8, i2', i4', i6' or v2, v4, v6
         if remove_input:
@@ -73,13 +69,6 @@ class tCube:
     # 增加一个公式到当前 tCube() 中
     def add(self, m):
         self.cubeLiterals.append(m) # HZ: does not convert to cnf for the time being
-        # g = Goal()
-        # g.add(m) #TODO: Check 这边CNF会不会出现问题（试试arb-start那个case）
-        # t = Tactic('tseitin-cnf')  # 转化得到该公式的 CNF 范式 #TODO:弄清楚这边转CNF如何转，能不能丢入Parafrost加速
-        # for c in t(g)[0]:
-        #     self.cubeLiterals.append(c)
-        # if len(t(g)[0]) == 0:
-        #     self.cubeLiterals.append(True)
 
     def true_size(self):
         '''
@@ -107,12 +96,7 @@ class tCube:
         for idx in literal_idx_to_remove:
             self.cubeLiterals[idx] = True
         return len(literal_idx_to_remove) != 0
-        # for each variable in cubeLiteral, check if it has negative literal in model
-        # if so, remove this literal
-        # return False if there is no removal (which should not happen)
 
-
-    # 删除第 i 个元素，并返回新的tCube
     def delete(self, i: int):
         res = tCube(self.t)
         for it, v in enumerate(self.cubeLiterals):
@@ -121,8 +105,6 @@ class tCube:
                 continue
             res.add(v)
         return res
-
-    #TODO: 验证这个cube()是否导致了求解速度变慢
 
     def cube(self): #导致速度变慢的罪魁祸首？
         return simplify(And(self.cubeLiterals))
@@ -136,18 +118,6 @@ class tCube:
             cube_literal = And(Not(And(children[0],Not(children[1]))), Not(And(children[1],Not(children[0]))))
             res.add(cube_literal)
         return res
-
-
-    # def ternary_sim(self, index_of_x):
-    #     # first extract var,val from cubeLiteral
-    #     s = Solver()
-    #     for idx, literal in enumerate(self.cubeLiterals):
-    #         if idx !=index_of_x:
-    #             s
-    #             var = str(var)
-    #
-    # def cube(self):
-    #     return And(*self.cubeLiterals)
 
     def __repr__(self):
         return str(self.t) + ": " + str(sorted(self.cubeLiterals, key=str))
@@ -165,8 +135,6 @@ def _extract(literaleq):
     else:
         assert(False)
     return v, val
-
-#TODO: 似乎仅支持六个参数的aag，有无办法解决这个问题？
 class Header:
     def __init__(self, max_idx: int, nIn: int, nLatch: int, nOut: int, nAnd: int, nBad: int, nInvariant):
         self.max_var_index = max_idx
@@ -214,12 +182,7 @@ def read_in(fileName: str):
     ands = list()
     invariants = list()
     annotations = list()
-
-    #TODO: 测试是否支持aiger1.9或者2.0以上的文件，如果不支持，考虑增加parsing过程
-    #TODO: 增加aiger 1.9 or 2.0转 1.0的功能
-    #TODO: 解析新的aiger （例如ILAng_pipeline下面的simple_pipe_verify_stall_ADD.aag）似乎会出现秒解出sat的问题
-
-    #TODO: 带invariant number （不考虑fairness和liveness），也就是7个参数的时候就出问题，感觉是这一块这个代码没有写全？
+    
     HEADER_PATTERN = re.compile("aag (\d+) (\d+) (\d+) (\d+) (\d+)(?: (\d+))?(?: (\d+))?\n")
     IO_PATTERN = re.compile("(\d+)\n")
     LATCH_PATTERN = re.compile("(\d+) (\d+)(?: (\d+))?\n")
@@ -507,33 +470,8 @@ class Model:
                 else:
                     print("Error in property definition")
                     exit(1)
-        # invariants
-        # for it in c:
-        #     tmp = int(it)
-        #     if tmp & 1 == 0:
-        #         if it in inp.keys():
-        #             property_items.append(inp[it])
-        #         elif it in vs.keys():
-        #             property_items.append(vs[it])
-        #         elif it in ands.keys():
-        #             property_items.append(ands[it])
-        #         else:
-        #             print("Error in property definition")
-        #             exit(1)
-        #     else:
-        #         it = str(int(it) - 1)
-        #         if it in inp.keys():
-        #             property_items.append(Not(inp[it]))
-        #         elif it in vs.keys():
-        #             property_items.append(Not(vs[it]))
-        #         elif it in ands.keys():
-        #             property_items.append(Not(ands[it]))
-        #         else:
-        #             print("Error in property definition")
-        #             exit(1)
-        #print("postadd")
-        #print("property items: ",property_items)
-        self.post.addAnds(property_items) #TODO: 修复这里识别不出bad state的问题，目前只有源文件btor用btor2tools转aiger的文件可以正常被parse
+
+        self.post.addAnds(property_items) 
         # self.post.add(Or(vs['54'], vs['66'], Not(vs['68']), Not(vs['56'])))
         # print("postAdded")
         print("self.inputs: ",self.inputs)
