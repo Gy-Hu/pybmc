@@ -50,8 +50,9 @@ if __name__ == '__main__':
         bmc.add(z3.Not(bmc.post.cube()))
         if bmc.check() == z3.sat:
             print(f"SAT, k = {_}")
-            break
+            exit(0)
         else:
             bmc.slv.pop()
-            
+    
+    
     print("The result is unknown")
