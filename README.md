@@ -6,3 +6,7 @@
 ## USAGE
 
 * `python main.py --aag <path to config file> --k <number of bound>`: run the algorithm with the given aag format file and bound k
+
+## Note
+
+* `git checkout k-induction` to switch to the k-induction branch
