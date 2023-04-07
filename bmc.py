@@ -41,10 +41,10 @@ class BMC:
         self.vardict[n] = v
         return v
 
-    def setup(self):
+    def setup(self, induction=False):
         self.slv = Solver()
         initmap = [(self.literals[i], self.vardef(str(self.literals[i])+"_0")) for i in range(len(self.literals))]
-        self.slv.add(substitute(self.init.cube(), initmap))
+        if not induction: self.slv.add(substitute(self.init.cube(), initmap))
         self.cnt = 0
     
     def get_map(self, idx):
