@@ -23,48 +23,61 @@ def convert_aig_to_aag(file):
         subprocess.call([aigtoaig_cmd, aig_path, tmpdir / "tmp.aag"])
         return bmc.BMC(*m.parse(tmpdir / "tmp.aag"))
         
-def k_induction(bmc, k):
+def k_induction(bmc, args):
     # BASE CASE
-    #bmc.setup(induction=True)
     bmc_1 = copy.deepcopy(bmc)
-    #bmc.slv.push()
-    #bmc_1.slv.push()
     bmc_1.setup()
     bmc_1.add(z3.Not(bmc_1.post.cube()))
     if bmc_1.check() == z3.unsat:
         # INDUCTION STEP
-        for step in range(1, k*10):
-            #bmc.slv.pop()
-            bmc.setup(induction=True)
+        bmc.setup(induction=True) # for verify P & T -> P
+        bmc_1.setup() # verify init & T -> P
+        bmc.add(bmc.post.cube())
+        bmc.slv.push(); bmc_1.slv.push()
+        for step in range(1, args.k+1):
+            bmc.slv.pop()
             print(f"Checking for CEX after {step} transitions")
-            bmc.add(bmc.post.cube())
-            for _ in range(step): bmc.unroll()
-            #bmc.slv.push()
+            bmc.unroll()
+            bmc.slv.push()
             bmc.add(z3.Not(bmc.post.cube()))
             if bmc.check() == z3.unsat:
                 print(f"Verified, p is {step} inductive")
                 return
-            bmc_1.setup()
-            for _ in range(step): bmc_1.unroll()
+            
+            bmc_1.slv.pop()
+            bmc_1.unroll()
+            bmc_1.slv.push()
             bmc_1.add(z3.Not(bmc_1.post.cube()))
             if bmc_1.check() == z3.sat:
                 print(f"Found CEX after {step} transitions")
                 return
-        print("Invariant couldn't be proven")
+        print(f"Invariant couldn't be proven inductive after {args.k} transitions")
     else:
         print("Invariant doesn't hold and there is a counterexample")
         # Add your trace_print function call here if needed
         return
+    
+def bmc_main(bmc, args):
+    for _ in range(1, args.k+1): 
+        print(f"Unrolling k = {_}")
+        bmc.unroll()
+        bmc.slv.push()
+        bmc.add(z3.Not(bmc.post.cube()))
+        if bmc.check() == z3.sat:
+            print(f"SAT, k = {_}")
+            exit(0)
+        else:
+            bmc.slv.pop()
+            
+    # reach here means UNSAT, k = args.k
+    print(f"The result is unknown after {args.k} bound by runing bmc")
 
 if __name__ == '__main__':
     help_info = "Usage: python main.py <file-name>.aag (or <file-name>.aig) --k <unrolling steps>"
     parser = argparse.ArgumentParser(description="Run tests examples on the BMC algorithm")
     parser.add_argument('--aag', type=str, help='The name of the test to run', default=None, nargs='?')
     parser.add_argument('--k', type=int, help='The number of unrolling steps', default=10, nargs='?')
-    #args = parser.parse_args(['--aag', 'dataset/aig_benchmark/hwmcc07_tip/nusmv.syncarb5^2.B.aag', '--k', '10'])
-    #args = parser.parse_args(['--aag', 'dataset/aig_benchmark/hwmcc07_tip_aag/texas.ifetch1^8.E.aag', '--k', '2'])
-    #args = parser.parse_args(['--aag', 'dataset/aig_benchmark/hwmcc10-mod/shortp0.aag', '--k', '2'])
-    #args = parser.parse_args(['--aag', './cnt.aag', '--k', '2'])
+    parser.add_argument('--mode', type=str, help='The mode of the algorithm, input bmc or k-ind', default='bmc', nargs='?')
     
     args = parser.parse_args()
     m = model.Model()
@@ -84,23 +97,13 @@ if __name__ == '__main__':
         bmc = bmc.BMC(*m.parse(file))
 
     bmc.setup()
-
-    for _ in range(1, args.k+1): 
-        print(f"Unrolling k = {_}")
-        bmc.unroll()
-        bmc.slv.push()
-        bmc.add(z3.Not(bmc.post.cube()))
-        if bmc.check() == z3.sat:
-            print(f"SAT, k = {_}")
-            exit(0)
-        else:
-            bmc.slv.pop()
-            
-    # reach here means UNSAT, k = args.k
-    print(f"The result is unknown after {args.k} bound")
-
-    # k-induction
-    # print("Running k-induction")
-    # k_induction(bmc, args.k)
+    if args.mode == 'bmc':
+        # bmc
+        print("Now running bmc")
+        bmc_main(bmc, args)
+    elif args.mode == 'k-ind':
+        # k-induction
+        print("Now running k-induction")
+        k_induction(bmc, args)
 
     
