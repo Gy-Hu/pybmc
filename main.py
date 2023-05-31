@@ -61,10 +61,12 @@ def bmc_main(bmc, args):
     for _ in range(1, args.k+1): 
         print(f"Unrolling k = {_}")
         bmc.unroll()
+        # execute bmc.unroll() k times
+        #for __ in range(34): bmc.unroll() #aig_benchmark/hwmcc07/intel/intel_038.aig -> idx = 35 (or 37, or other bound?)
         bmc.slv.push()
         bmc.add(z3.Not(bmc.post.cube()))
         if bmc.check() == z3.sat:
-            print(f"SAT, k = {_}")
+            print(f"SAT, k = {_}, idx = {bmc.cnt}")
             exit(0)
         else:
             bmc.slv.pop()
@@ -78,7 +80,7 @@ if __name__ == '__main__':
     parser.add_argument('--aag', type=str, help='The name of the test to run', default=None, nargs='?')
     parser.add_argument('--k', type=int, help='The number of unrolling steps', default=10, nargs='?')
     parser.add_argument('--mode', type=str, help='The mode of the algorithm, input bmc or k-ind', default='bmc', nargs='?')
-    
+    #args = parser.parse_args(['--aag', 'dataset/aig_benchmark/hwmcc07/intel/intel_038.aig', '--k', '100'])
     args = parser.parse_args()
     m = model.Model()
     # UNSAFE 1 - simple

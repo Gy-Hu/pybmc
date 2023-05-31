@@ -1,2 +1,5 @@
 __pycache__/
 aiger/
+dataset/
+picosat/
+aiger-py/

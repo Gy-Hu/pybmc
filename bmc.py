@@ -56,6 +56,7 @@ class BMC:
         idx = self.cnt
         var_map = self.get_map(idx)
         self.slv.add(substitute(self.trans.cube(), var_map) )
+        #self.slv.add(simplify(substitute(self.trans.cube(), var_map) ))
         # Constrain the input variables as well
         # input_map = [(self.primary_inputs[i], self.vardef(str(self.primary_inputs[i])+"_"+str(idx))) for i in range(len(self.primary_inputs))]
         # self.slv.add(substitute(And([pi == pi_prime for pi, pi_prime in self.inp_map]), input_map))
