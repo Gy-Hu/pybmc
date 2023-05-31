@@ -81,7 +81,8 @@ if __name__ == '__main__':
     parser.add_argument('--k', type=int, help='The number of unrolling steps', default=10, nargs='?')
     parser.add_argument('--mode', type=str, help='The mode of the algorithm, input bmc or k-ind', default='bmc', nargs='?')
     #args = parser.parse_args(['--aag', 'dataset/aig_benchmark/hwmcc07/intel/intel_038.aig', '--k', '100'])
-    args = parser.parse_args()
+    args = parser.parse_args(['--aag', 'cnt.aag', '--k', '100'])
+    #args = parser.parse_args()
     m = model.Model()
     # UNSAFE 1 - simple
     #file = "dataset/aig_benchmark/hwmcc07_tip_aag/texas.ifetch1^8.E.aag"
