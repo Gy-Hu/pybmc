@@ -61,14 +61,13 @@ class tCube:
         self.cubeLiterals = [self.cubeLiterals[i] for i in range(len(self.cubeLiterals)) if i not in index_to_remove]
 
 
-    # 扩增 CNF 式
     def addAnds(self, ms):
         for i in ms:
             self.add(i)
 
-    # 增加一个公式到当前 tCube() 中
+   
     def add(self, m):
-        self.cubeLiterals.append(m) # HZ: does not convert to cnf for the time being
+        self.cubeLiterals.append(m) 
 
     def true_size(self):
         '''
@@ -106,7 +105,7 @@ class tCube:
             res.add(v)
         return res
 
-    def cube(self): #导致速度变慢的罪魁祸首？
+    def cube(self): 
         return simplify(And(self.cubeLiterals))
 
     # Convert the trans into real cube
@@ -143,7 +142,7 @@ class Header:
         self.outputs = nOut
         self.ands = nAnd
         self.bads = nBad
-        self.invariants = nInvariant #TODO：看上去是支持aiger1.9格式的，因为bad和invariant都是1.9引入的，找出一些case不行的原因
+        self.invariants = nInvariant 
 
 
 class Latch:
@@ -259,7 +258,7 @@ def read_in(fileName: str):
                     # print("and node")
                     # print(str(h.groups()))
                     ands.append(AND(h.group(1), h.group(2), h.group(3)))
-                    and_num -= 1 #TODO: 现在需要dataset里面aag文件最后有一个空行，实际上这部分代码是有点问题的
+                    and_num -= 1 
             else:
                 h = re.match(ANNOTATION_PATTERN, line)
                 if h:
