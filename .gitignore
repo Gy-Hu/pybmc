@@ -3,4 +3,4 @@ aiger/
 dataset/
 picosat/
 aiger-py/
-*.cnf/
+*.cnf
