@@ -75,7 +75,7 @@ def bmc_main(bmc, args):
     # reach here means UNSAT, k = args.k
     print(f"The result is unknown after {args.k} bound by runing bmc")
     
-def convert_z3_to_dimacs(z3_expr):
+def convert_z3_to_dimacs(z3_expr): # z3_expr is a z3 expression, e.g. bmc.slv.assertions()
     f = CNFFormula.from_z3(z3_expr)
     cnf_string_lst = f.to_dimacs_string()
     #print(cnf_string_lst)
