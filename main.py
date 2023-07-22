@@ -66,6 +66,7 @@ def bmc_main(bmc, args):
         #for __ in range(34): bmc.unroll() #aig_benchmark/hwmcc07/intel/intel_038.aig -> idx = 35 (or 37, or other bound?)
         bmc.slv.push()
         bmc.add(z3.Not(bmc.post.cube()))
+        #convert_z3_to_dimacs(bmc.slv.assertions())
         if bmc.check() == z3.sat:
             print(f"SAT, k = {_}, idx = {bmc.cnt}")
             exit(0)
@@ -77,7 +78,7 @@ def bmc_main(bmc, args):
     
 def convert_z3_to_dimacs(z3_expr): # z3_expr is a z3 expression, e.g. bmc.slv.assertions()
     f = CNFFormula.from_z3(z3_expr)
-    cnf_string_lst = f.to_dimacs_string()
+    #cnf_string_lst = f.to_dimacs_string()
     #print(cnf_string_lst)
     f.to_dimacs_file("tmp.cnf")
 

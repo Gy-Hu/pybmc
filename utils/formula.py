@@ -49,8 +49,9 @@ class CNFFormula:
         :return: None
         """
         self.subgoal = self.tactics(self.goal)
-        if len(self.subgoal) > 1:
-            print("warning: multiple subgoal for the formula")
+        assert len(self.subgoal) == 1, "warning: multiple subgoal for the formula"
+        # if len(self.subgoal) > 1:
+        #     print("warning: multiple subgoal for the formula")
 
     @staticmethod
     def from_z3(smt_formula) -> 'CNFFormula':
