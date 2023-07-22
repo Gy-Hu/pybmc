@@ -13,7 +13,7 @@ import argparse
 import z3
 import tempfile
 import copy
-from utils.formula import CNFFormula
+from utils.formula import from_z3, CNFFormula
 
 def convert_aig_to_aag(file):
     aig_path = file
@@ -77,7 +77,7 @@ def bmc_main(bmc, args):
     print(f"The result is unknown after {args.k} bound by runing bmc")
     
 def convert_z3_to_dimacs(z3_expr): # z3_expr is a z3 expression, e.g. bmc.slv.assertions()
-    f = CNFFormula.from_z3(z3_expr)
+    f = from_z3(z3_expr)
     #cnf_string_lst = f.to_dimacs_string()
     #print(cnf_string_lst)
     f.to_dimacs_file("tmp.cnf")

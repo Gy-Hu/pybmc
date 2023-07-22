@@ -9,13 +9,17 @@ import z3
 PathLike = Union[Path, str]
 
 
-class MalformedDimacs(Exception):
+def from_z3(smt_formula) -> 'CNFFormula':
     """
-    Exception raised when the DIMACS
-    parsing fail.
-    """
-    pass
+    Convert a Z3 expression to a CNF formula.
 
+    :param smt_formula: Z3 expression (all types that can be fed to a Goal instance)
+    :return: a CNF Formula instance
+    """
+    f = CNFFormula()
+    f.goal.add(smt_formula)
+    f._apply_tactics()
+    return f
 
 class CNFFormula:
     """
@@ -53,18 +57,7 @@ class CNFFormula:
         # if len(self.subgoal) > 1:
         #     print("warning: multiple subgoal for the formula")
 
-    @staticmethod
-    def from_z3(smt_formula) -> 'CNFFormula':
-        """
-        Convert a Z3 expression to a CNF formula.
-
-        :param smt_formula: Z3 expression (all types that can be fed to a Goal instance)
-        :return: a CNF Formula instance
-        """
-        f = CNFFormula()
-        f.goal.add(smt_formula)
-        f._apply_tactics()
-        return f
+    
 
 
     def to_dimacs_file(self, output_file: PathLike) -> None:
@@ -93,5 +86,3 @@ class CNFFormula:
             return [self.subgoal[0].dimacs()]
         else:
             assert False, "warning: no subgoal to write"
-
-            
