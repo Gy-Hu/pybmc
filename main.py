@@ -13,6 +13,7 @@ import argparse
 import z3
 import tempfile
 import copy
+from utils.formula import CNFFormula
 
 def convert_aig_to_aag(file):
     aig_path = file
@@ -73,6 +74,12 @@ def bmc_main(bmc, args):
             
     # reach here means UNSAT, k = args.k
     print(f"The result is unknown after {args.k} bound by runing bmc")
+    
+def convert_z3_to_dimacs(z3_expr):
+    f = CNFFormula.from_z3(z3_expr)
+    cnf_string_lst = f.to_dimacs_string()
+    #print(cnf_string_lst)
+    f.to_dimacs_file("tmp.cnf")
 
 if __name__ == '__main__':
     help_info = "Usage: python main.py <file-name>.aag (or <file-name>.aig) --k <unrolling steps>"
@@ -81,8 +88,8 @@ if __name__ == '__main__':
     parser.add_argument('--k', type=int, help='The number of unrolling steps', default=10, nargs='?')
     parser.add_argument('--mode', type=str, help='The mode of the algorithm, input bmc or k-ind', default='bmc', nargs='?')
     #args = parser.parse_args(['--aag', 'dataset/aig_benchmark/hwmcc07/intel/intel_038.aig', '--k', '100'])
-    #args = parser.parse_args(['--aag', 'cnt.aag', '--k', '100'])
-    args = parser.parse_args()
+    args = parser.parse_args(['--aag', 'cnt.aag', '--k', '100'])
+    #args = parser.parse_args()
     m = model.Model()
     # UNSAFE 1 - simple
     #file = "dataset/aig_benchmark/hwmcc07_tip_aag/texas.ifetch1^8.E.aag"
