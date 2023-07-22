@@ -169,6 +169,7 @@ class CNFFormula:
             if self.subgoal:
                 f.write(self.subgoal[0].dimacs())
             else:
+                assert False, "warning: check the length of the clauses"
                 f.write("p cnf {} {}\n".format(self.variables_num, self.clauses_num))
                 for c in self.clauses:
                     f.write("{} 0\n".format(" ".join(str(x) for x in c)))
@@ -186,6 +187,7 @@ class CNFFormula:
             cnf_string_lst.append(self.subgoal[0].dimacs())
             return cnf_string_lst
         else:
+            assert False, "warning: check the length of the clauses"
             cnf_string_lst.append("p cnf {} {}\n".format(self.variables_num, self.clauses_num))
             for c in self.clauses: cnf_string_lst.append("{} 0\n".format(" ".join(str(x) for x in c)))
             return cnf_string_lst
